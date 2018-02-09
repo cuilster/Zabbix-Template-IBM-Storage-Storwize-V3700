@@ -8,12 +8,12 @@ For Zabbix 3.4
 	- root login zabbix server
 	- nano /etc/passwd
 	* alter line:
-		"zabbix\:x:109:114::/home/zabbix:/bin/false"
+		"/home/zabbix:/bin/false"
 	'to:
-		"zabbix\:x:109:114::/home/zabbix:/bin/bash"
+		"/home/zabbix:/bin/bash"
  
 2. create / move home dir of user zabbix
- source: https://www.zabbix.com/documentation/3.4/manual/config/items/itemtypes/ssh_checks
+source: https://www.zabbix.com/documentation/3.4/manual/config/items/itemtypes/ssh_checks
 
 	- service zabbix-agent stop
 	- service zabbix-server stop
