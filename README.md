@@ -13,7 +13,8 @@ enable loginshell for user zabbix
 		"/home/zabbix:/bin/bash"
  
 create / move home dir of user zabbix
-source: https://www.zabbix.com/documentation/3.4/manual/config/items/itemtypes/ssh_checks
+-
+(source: https://www.zabbix.com/documentation/3.4/manual/config/items/itemtypes/ssh_checks)
 
 	- service zabbix-agent stop
 	- service zabbix-server stop
