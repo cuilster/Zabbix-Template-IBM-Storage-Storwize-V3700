@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. /etc/zabbix/scripts/ibmv3700_discovery.sh
+. /usr/lib/zabbix/externalscripts/ibmv3700_discovery.sh
 
 STORWIZEADDR=$(echo $1)
 
