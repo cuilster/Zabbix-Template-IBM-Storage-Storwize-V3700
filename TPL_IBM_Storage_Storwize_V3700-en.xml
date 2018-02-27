@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>3.5</version>
+    <version>3.4</version>
     <date>2018-02-27T16:07:41Z</date>
     <groups>
         <group>
@@ -1128,7 +1128,7 @@
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
-                                    <name>Volume</name>
+                                    <name>Volumes</name>
                                 </application>
                             </applications>
                             <valuemap/>
@@ -1170,7 +1170,7 @@
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
-                                    <name>Volume</name>
+                                    <name>Volumes</name>
                                 </application>
                             </applications>
                             <valuemap/>
