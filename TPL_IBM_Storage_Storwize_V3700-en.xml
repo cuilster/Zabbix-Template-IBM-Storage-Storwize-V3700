@@ -370,7 +370,7 @@
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Aktuelle Glasfaser-Verbindungs-Geschwindigkeit (IOps)</name>
+                            <name>Current fiber connection speed (IOps)</name>
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -412,7 +412,7 @@
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Aktuelle Glasfaser-Verbindungs-Geschwindigkeit (MB)</name>
+                            <name>Current fiber connection speed (MB)</name>
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -454,7 +454,7 @@
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Aktuelle iSCSi-Verbindungs-Geschwindigkeit (IOps)</name>
+                            <name>Current iSCSi connection speed (IOps)</name>
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -496,7 +496,7 @@
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Aktuelle iSCSi-Verbindungs-Geschwindigkeit (MB)</name>
+                            <name>Current iSCSi connection speed (MB)</name>
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -580,7 +580,7 @@
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Leistungsaufnahme</name>
+                            <name>Power consumption</name>
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -622,7 +622,7 @@
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Aktive Netzteile</name>
+                            <name>Active power supplies</name>
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -664,7 +664,7 @@
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Aktuelle SAS-Verbindungs-Geschwindigkeit (IOps)</name>
+                            <name>Current SAS connection speed (IOps)</name>
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -706,7 +706,7 @@
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Aktuelle SAS-Verbindungs-Geschwindigkeit (MB)</name>
+                            <name>Current SAS connection speed (MB)</name>
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -748,7 +748,7 @@
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Speicherplatz - zugewiesen</name>
+                            <name>Storage space - assigned</name>
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -790,7 +790,7 @@
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Temperatur</name>
+                            <name>Temperature</name>
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -832,7 +832,7 @@
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Cache - gesamt</name>
+                            <name>Cache - total</name>
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -874,7 +874,7 @@
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Speicherplatz - verfügbar</name>
+                            <name>Storage space - available</name>
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -916,7 +916,7 @@
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Speicherplatz - gesamt</name>
+                            <name>Storage space - total</name>
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -1000,7 +1000,7 @@
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Schreib-Cache</name>
+                            <name>Write Cache</name>
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -1047,7 +1047,7 @@
                             <expression>{TPL_IBM_Storage_Storwize_V3700:ibm_3700_man_system.sh[{#STORWIZEADDR},psu_online].last(,5m)}=1</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
-                            <name>Änderung bei Anzahl der Netzteile</name>
+                            <name>Change in number of power supplies</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
@@ -1097,7 +1097,7 @@
                     <description/>
                     <item_prototypes>
                         <item_prototype>
-                            <name>Größe des Volumes {#VOLNAME}</name>
+                            <name>Size of volume {#VOLNAME}</name>
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -1128,7 +1128,7 @@
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
-                                    <name>Volumes</name>
+                                    <name>Volume</name>
                                 </application>
                             </applications>
                             <valuemap/>
@@ -1139,7 +1139,7 @@
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Status des Volumes {#VOLNAME}</name>
+                            <name>Status of volume {#VOLNAME}</name>
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -1170,7 +1170,7 @@
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
-                                    <name>Volumes</name>
+                                    <name>Volume</name>
                                 </application>
                             </applications>
                             <valuemap/>
@@ -1186,7 +1186,7 @@
                             <expression>{TPL_IBM_Storage_Storwize_V3700:ibm_3700_man_volume.sh[{#STORWIZEADDR},{#VOLNAME},status].str(online)}&lt;&gt;1</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
-                            <name>Änderung des Fetplattenstatus {#VOLNAME}</name>
+                            <name>Change of disk status {#VOLNAME}</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
