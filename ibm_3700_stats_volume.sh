@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. /usr/lib/zabbix/externalscripts/ibmv3700_discovery.sh
+. /usr/lib/zabbix/externalscripts/ibm_3700_discovery.sh
 
 STORWIZEADDR=$(echo $1)
 VOLNAME=$(echo $2)
