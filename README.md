@@ -62,7 +62,7 @@ on zabbix server add storwize to known_hosts
 --Info
 	
 	- Items are changed to external checks
-	- Items are German now / change as desired
+	- Items are German or English now / pick template or change as desired
 	- check interval is changed to 5-10 minutes
 
 # TODO: 
