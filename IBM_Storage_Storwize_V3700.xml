@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>TPL_IBM_Storage_Storwize_V3700</template>
-            <name>TPL_IBM_Storage_Storwize_V3700</name>
+            <template>IBM_Storage_Storwize_V3700</template>
+            <name>IBM_Storage_Storwize_V3700</name>
             <description/>
             <groups>
                 <group>
@@ -35,7 +35,7 @@
                     <type>10</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>ibm_3700_man.sh[{HOST.IP},drive]</key>
+                    <key>ibm_3700_discovery.sh[{HOST.IP},drive]</key>
                     <delay>5m</delay>
                     <status>0</status>
                     <allowed_hosts/>
@@ -67,7 +67,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_drive.sh[{#STORWIZEADDR},{#SLOTID},enclosure_id]</key>
+                            <key>ibm_3700_stats_drive.sh[{#STORWIZEADDR},{#SLOTID},enclosure_id]</key>
                             <delay>10m</delay>
                             <history>90d</history>
                             <trends>0</trends>
@@ -109,7 +109,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_drive.sh[{#STORWIZEADDR},{#SLOTID},mdisk_name]</key>
+                            <key>ibm_3700_stats_drive.sh[{#STORWIZEADDR},{#SLOTID},mdisk_name]</key>
                             <delay>10m</delay>
                             <history>90d</history>
                             <trends>0</trends>
@@ -151,7 +151,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_drive.sh[{#STORWIZEADDR},{#SLOTID},status]</key>
+                            <key>ibm_3700_stats_drive.sh[{#STORWIZEADDR},{#SLOTID},status]</key>
                             <delay>10m</delay>
                             <history>90d</history>
                             <trends>0</trends>
@@ -193,7 +193,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_drive.sh[{#STORWIZEADDR},{#SLOTID},type]</key>
+                            <key>ibm_3700_stats_drive.sh[{#STORWIZEADDR},{#SLOTID},type]</key>
                             <delay>10m</delay>
                             <history>90d</history>
                             <trends>0</trends>
@@ -235,7 +235,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_drive.sh[{#STORWIZEADDR},{#SLOTID},use]</key>
+                            <key>ibm_3700_stats_drive.sh[{#STORWIZEADDR},{#SLOTID},use]</key>
                             <delay>10m</delay>
                             <history>90d</history>
                             <trends>0</trends>
@@ -275,7 +275,7 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{TPL_IBM_Storage_Storwize_V3700:ibm_3700_man_drive.sh[{#STORWIZEADDR},{#SLOTID},status].str(online)}&lt;&gt;1</expression>
+                            <expression>{IBM_Storage_Storwize_V3700:ibm_3700_stats_drive.sh[{#STORWIZEADDR},{#SLOTID},status].str(online)}&lt;&gt;1</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>Change disk status in slot {#SLOTID}</name>
@@ -300,7 +300,7 @@
                     <type>10</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>ibm_3700_man.sh[{HOST.IP},system]</key>
+                    <key>ibm_3700_discovery.sh[{HOST.IP},system]</key>
                     <delay>5m</delay>
                     <status>0</status>
                     <allowed_hosts/>
@@ -332,7 +332,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_system.sh[{#STORWIZEADDR},cpu_pc]</key>
+                            <key>ibm_3700_stats_system.sh[{#STORWIZEADDR},cpu_pc]</key>
                             <delay>5m</delay>
                             <history>30d</history>
                             <trends>365d</trends>
@@ -374,7 +374,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_system.sh[{#STORWIZEADDR},fc_io]</key>
+                            <key>ibm_3700_stats_system.sh[{#STORWIZEADDR},fc_io]</key>
                             <delay>5m</delay>
                             <history>30d</history>
                             <trends>365d</trends>
@@ -416,7 +416,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_system.sh[{#STORWIZEADDR},fc_mb]</key>
+                            <key>ibm_3700_stats_system.sh[{#STORWIZEADDR},fc_mb]</key>
                             <delay>5m</delay>
                             <history>30d</history>
                             <trends>365d</trends>
@@ -458,7 +458,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_system.sh[{#STORWIZEADDR},iscsi_io]</key>
+                            <key>ibm_3700_stats_system.sh[{#STORWIZEADDR},iscsi_io]</key>
                             <delay>5m</delay>
                             <history>30d</history>
                             <trends>365d</trends>
@@ -500,7 +500,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_system.sh[{#STORWIZEADDR},iscsi_mb]</key>
+                            <key>ibm_3700_stats_system.sh[{#STORWIZEADDR},iscsi_mb]</key>
                             <delay>5m</delay>
                             <history>30d</history>
                             <trends>365d</trends>
@@ -542,7 +542,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_system.sh[{#STORWIZEADDR},mdisk_ms]</key>
+                            <key>ibm_3700_stats_system.sh[{#STORWIZEADDR},mdisk_ms]</key>
                             <delay>10m</delay>
                             <history>7d</history>
                             <trends>365d</trends>
@@ -584,7 +584,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_system.sh[{#STORWIZEADDR},power_w]</key>
+                            <key>ibm_3700_stats_system.sh[{#STORWIZEADDR},power_w]</key>
                             <delay>10m</delay>
                             <history>7d</history>
                             <trends>365d</trends>
@@ -626,7 +626,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_system.sh[{#STORWIZEADDR},psu_online]</key>
+                            <key>ibm_3700_stats_system.sh[{#STORWIZEADDR},psu_online]</key>
                             <delay>10m</delay>
                             <history>7d</history>
                             <trends>365d</trends>
@@ -668,7 +668,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_system.sh[{#STORWIZEADDR},sas_io]</key>
+                            <key>ibm_3700_stats_system.sh[{#STORWIZEADDR},sas_io]</key>
                             <delay>5m</delay>
                             <history>30d</history>
                             <trends>365d</trends>
@@ -710,7 +710,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_system.sh[{#STORWIZEADDR},sas_mb]</key>
+                            <key>ibm_3700_stats_system.sh[{#STORWIZEADDR},sas_mb]</key>
                             <delay>5m</delay>
                             <history>7d</history>
                             <trends>365d</trends>
@@ -752,7 +752,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_system.sh[{#STORWIZEADDR},space_allocated_to_vdisks]</key>
+                            <key>ibm_3700_stats_system.sh[{#STORWIZEADDR},space_allocated_to_vdisks]</key>
                             <delay>10m</delay>
                             <history>7d</history>
                             <trends>365d</trends>
@@ -794,7 +794,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_system.sh[{#STORWIZEADDR},temp_c]</key>
+                            <key>ibm_3700_stats_system.sh[{#STORWIZEADDR},temp_c]</key>
                             <delay>5m</delay>
                             <history>30d</history>
                             <trends>365d</trends>
@@ -836,7 +836,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_system.sh[{#STORWIZEADDR},total_cache_pc]</key>
+                            <key>ibm_3700_stats_system.sh[{#STORWIZEADDR},total_cache_pc]</key>
                             <delay>5m</delay>
                             <history>30d</history>
                             <trends>365d</trends>
@@ -878,7 +878,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_system.sh[{#STORWIZEADDR},total_free_space]</key>
+                            <key>ibm_3700_stats_system.sh[{#STORWIZEADDR},total_free_space]</key>
                             <delay>10m</delay>
                             <history>7d</history>
                             <trends>365d</trends>
@@ -920,7 +920,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_system.sh[{#STORWIZEADDR},total_mdisk_capacity]</key>
+                            <key>ibm_3700_stats_system.sh[{#STORWIZEADDR},total_mdisk_capacity]</key>
                             <delay>10m</delay>
                             <history>7d</history>
                             <trends>365d</trends>
@@ -962,7 +962,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_system.sh[{#STORWIZEADDR},vdisk_ms]</key>
+                            <key>ibm_3700_stats_system.sh[{#STORWIZEADDR},vdisk_ms]</key>
                             <delay>10m</delay>
                             <history>7d</history>
                             <trends>365d</trends>
@@ -1004,7 +1004,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_system.sh[{#STORWIZEADDR},write_cache_pc]</key>
+                            <key>ibm_3700_stats_system.sh[{#STORWIZEADDR},write_cache_pc]</key>
                             <delay>10m</delay>
                             <history>7d</history>
                             <trends>365d</trends>
@@ -1044,7 +1044,7 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{TPL_IBM_Storage_Storwize_V3700:ibm_3700_man_system.sh[{#STORWIZEADDR},psu_online].last(,5m)}=1</expression>
+                            <expression>{IBM_Storage_Storwize_V3700:ibm_3700_stats_system.sh[{#STORWIZEADDR},psu_online].last(,5m)}=1</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>Change in number of power supplies</name>
@@ -1069,7 +1069,7 @@
                     <type>10</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>ibm_3700_man.sh[{HOST.IP},volume]</key>
+                    <key>ibm_3700_discovery.sh[{HOST.IP},volume]</key>
                     <delay>5m</delay>
                     <status>0</status>
                     <allowed_hosts/>
@@ -1101,7 +1101,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_volume.sh[{#STORWIZEADDR},{#VOLNAME},size]</key>
+                            <key>ibm_3700_stats_volume.sh[{#STORWIZEADDR},{#VOLNAME},size]</key>
                             <delay>5m</delay>
                             <history>7d</history>
                             <trends>365d</trends>
@@ -1143,7 +1143,7 @@
                             <type>10</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>ibm_3700_man_volume.sh[{#STORWIZEADDR},{#VOLNAME},status]</key>
+                            <key>ibm_3700_stats_volume.sh[{#STORWIZEADDR},{#VOLNAME},status]</key>
                             <delay>5m</delay>
                             <history>7d</history>
                             <trends>0</trends>
@@ -1183,7 +1183,7 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{TPL_IBM_Storage_Storwize_V3700:ibm_3700_man_volume.sh[{#STORWIZEADDR},{#VOLNAME},status].str(online)}&lt;&gt;1</expression>
+                            <expression>{IBM_Storage_Storwize_V3700:ibm_3700_stats_volume.sh[{#STORWIZEADDR},{#VOLNAME},status].str(online)}&lt;&gt;1</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>Change of disk status {#VOLNAME}</name>
