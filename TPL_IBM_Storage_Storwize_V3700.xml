@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.4</version>
-    <date>2018-02-09T08:18:10Z</date>
+    <date>2018-02-28T10:07:45Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -757,9 +757,9 @@
                             <history>7d</history>
                             <trends>365d</trends>
                             <status>0</status>
-                            <value_type>0</value_type>
+                            <value_type>3</value_type>
                             <allowed_hosts/>
-                            <units>TB</units>
+                            <units>B</units>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -883,9 +883,9 @@
                             <history>7d</history>
                             <trends>365d</trends>
                             <status>0</status>
-                            <value_type>0</value_type>
+                            <value_type>3</value_type>
                             <allowed_hosts/>
-                            <units>TB</units>
+                            <units>B</units>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -925,9 +925,9 @@
                             <history>7d</history>
                             <trends>365d</trends>
                             <status>0</status>
-                            <value_type>0</value_type>
+                            <value_type>3</value_type>
                             <allowed_hosts/>
-                            <units>TB</units>
+                            <units>B</units>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1108,7 +1108,7 @@
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
-                            <units>GB</units>
+                            <units>B</units>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
