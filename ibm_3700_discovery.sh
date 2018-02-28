@@ -8,7 +8,7 @@ SSHKEY=/home/zabbix/.ssh/id_rsa
 IFS='
 '
 system(){
-	${SSHCMD} zabbix@${STORWIZEADDR} -i ${SSHKEY} "svcinfo lssystem; svcinfo lssystemstats; svcinfo lsenclosure" > ${REPODIR}/${STORWIZEADDR}.system.repo.tmp && mv ${REPODIR}/${STORWIZEADDR}.system.repo.tmp ${REPODIR}/${STORWIZEADDR}.system.repo
+	${SSHCMD} zabbix@${STORWIZEADDR} -i ${SSHKEY} "svcinfo lssystem -bytes; svcinfo lssystemstats; svcinfo lsenclosure" > ${REPODIR}/${STORWIZEADDR}.system.repo.tmp && mv ${REPODIR}/${STORWIZEADDR}.system.repo.tmp ${REPODIR}/${STORWIZEADDR}.system.repo
 
 	echo "{
 	   \"data\":[
@@ -37,7 +37,7 @@ drive(){
 }
 
 volume(){
-	${SSHCMD} zabbix@${STORWIZEADDR} -i ${SSHKEY} "svcinfo lsvdisk" > ${REPODIR}/${STORWIZEADDR}.volume.repo.tmp && mv ${REPODIR}/${STORWIZEADDR}.volume.repo.tmp ${REPODIR}/${STORWIZEADDR}.volume.repo
+	${SSHCMD} zabbix@${STORWIZEADDR} -i ${SSHKEY} "svcinfo lsvdisk -bytes" > ${REPODIR}/${STORWIZEADDR}.volume.repo.tmp && mv ${REPODIR}/${STORWIZEADDR}.volume.repo.tmp ${REPODIR}/${STORWIZEADDR}.volume.repo
         echo "{
                 \"data\":[
                         " > ${REPODIR}/${STORWIZEADDR}.volume.tmp
