@@ -5,19 +5,16 @@
 STORWIZEADDR=$(echo $1)
 
 space_allocated_to_vdisks () {
-	num=`grep -w "space_allocated_to_vdisks" ${REPODIR}/${STORWIZEADDR}.system.repo | awk -F'TB' '{ print $1 }' | awk '{ print $2 }'`
-	echo "scale=1;$num/1" | bc
+	grep -w "space_allocated_to_vdisks" ${REPODIR}/${STORWIZEADDR}.system.repo | awk '{ print $2 }'
 }
 
 total_mdisk_capacity () {
-        num=`grep -w "total_mdisk_capacity" ${REPODIR}/${STORWIZEADDR}.system.repo | awk -F'TB' '{ print $1 }' | awk '{ print $2 }'`
-	echo "scale=1;$num/1" | bc
+        grep -w "total_mdisk_capacity" ${REPODIR}/${STORWIZEADDR}.system.repo | awk '{ print $2 }'
 }
 
 total_free_space () {
-        num=`grep -w "total_free_space" ${REPODIR}/${STORWIZEADDR}.system.repo | awk -F'TB' '{ print $1 }' | awk '{ print $2 }'`
-	echo "scale=1;$num/1" | bc
-}
+        grep -w "total_free_space" ${REPODIR}/${STORWIZEADDR}.system.repo | awk '{ print $2 }'
+}	
 
 cpu_pc () {
         grep -w "cpu_pc" ${REPODIR}/${STORWIZEADDR}.system.repo | awk '{ print $2 }'
