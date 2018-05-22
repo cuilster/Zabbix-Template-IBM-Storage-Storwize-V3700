@@ -55,14 +55,14 @@ on zabbix server add storwize to known_hosts
 	
 # Template Import
 
-	- import TPL_IBM_Storage_Storwize_V3700.xml
+	- import TPL_IBM_Storage_Storwize_V3700.xml (german) or IBM_Storage_Storwize_V3700.xml (english)
 	- assign Template to existing IBM V3700
 	- standard macro {HOST.IP} is used
 	
 --Info
 	
 	- Items are changed to external checks
-	- Items are German now / change as desired
+	- Items are German or English now / pick template or change as desired
 	- check interval is changed to 5-10 minutes
 
 # TODO: 
